@@ -22,10 +22,6 @@ class Transport:
 class Car(Transport):
     FUEL_CONSUMPTION_CAR = 0.12
     
-    def __init__(self, f, color):
-        
-        self.color = color
-        super().__init__(f)
 
 
     def calculate_reachable_distance(self):
@@ -42,7 +38,7 @@ class Airplane(Transport):
         return f'Топлива осталось на {result} часов'
 
 
-jeep = Car(80, "green")
+jeep = Car(80)
 print(jeep.calculate_reachable_distance())
 jeep.add_trip(Trip(dist=144, comment='туристический маршрут'))
 print(jeep.calculate_reachable_distance())
